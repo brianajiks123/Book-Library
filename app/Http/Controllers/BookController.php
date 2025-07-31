@@ -2,6 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\{
+    StoreBookRequest,
+    UpdateBookRequest
+};
 use App\Models\{
     Book,
     Category
@@ -46,7 +50,7 @@ class BookController extends Controller
     }
 
     // Store a newly created resource in storage.
-    public function store(Request $request)
+    public function store(StoreBookRequest $request)
     {
         Book::create($request->validated());
         return redirect()->route('books.index')->with('success', 'Book created successfully.');
@@ -67,7 +71,7 @@ class BookController extends Controller
     }
 
     // Update the specified resource in storage.
-    public function update(Request $request, Book $book)
+    public function update(UpdateBookRequest $request, Book $book)
     {
         $book->update($request->validated());
         return redirect()->route('books.index')->with('success', 'Book updated successfully.');
