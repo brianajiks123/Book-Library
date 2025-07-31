@@ -2,8 +2,8 @@
 
 ## Screenshots
 
-![List Category](docs/list_category.png)
-![List Book](docs/list_book.png)
+![List Category](docs/List_Category.png)
+![List Book](docs/List_Book.png)
 
 ## Features
 
